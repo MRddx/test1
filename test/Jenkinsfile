@@ -23,7 +23,7 @@ pipeline {
 "envs": [
 {
 "name": "test",
-"value": "$GIT_COMMIT",
+"value": "$new",
 "sensitive": 0
 }
 ]
