@@ -12,5 +12,23 @@ pipeline {
           ]]])
         }
       }
+      stage('阶段 2-1') {
+        steps {
+          sh '''curl -u pton3jowzj5o:38a2218f618e6be13d5b3c1e871f70a1621ea302 \\
+-v -X POST  \'https://dai-test.coding.net/api/cci/job/849989/trigger\' \\
+-H \'Content-Type: application/json\' \\
+-d \'
+{
+"ref": "master",
+"envs": [
+{
+"name": "test",
+"value": "$GIT_COMMIT",
+"sensitive": 0
+}
+]
+}\''''
+        }
+      }
     }
   }
