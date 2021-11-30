@@ -23,7 +23,7 @@ pipeline {
 "envs": [
 {
 "name": "test",
-"value": "$new",
+"value": '$new',
 "sensitive": 0
 }
 ]
